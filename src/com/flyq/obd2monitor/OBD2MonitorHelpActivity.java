@@ -19,9 +19,9 @@ public class OBD2MonitorHelpActivity extends Activity {
 
         mOBD2Protocols = (ListView)findViewById(R.id.obd2_protocol_listView);
         String[] mItems = getResources().getStringArray(R.array.protocols);
-        // 建立Adapter并且绑定数据源
+        // Create a Adapter for the mOBD2Protocols(ListView) and then bind the datasource
         ArrayAdapter<String> listAdapter = new ArrayAdapter<String>(this, R.layout.device_name, mItems);
-        //绑定 Adapter到控件
+        //Sets the data behind this mOBD2Protocols(ListView)
         mOBD2Protocols.setAdapter(listAdapter);
 
         mOBD2Commands = (GridView)findViewById(R.id.obd2_cmd_gridView);
